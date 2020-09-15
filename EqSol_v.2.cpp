@@ -1,6 +1,6 @@
- #include <stdio.h>
- #include <math.h>
- #include <assert.h>
+#include <stdio.h>
+#include <math.h>
+#include <assert.h>
 
 /*!
 
@@ -152,7 +152,7 @@ int is_Zero (double val)
 void coeffNormalizing (double *a, double *b, double *c)
     {
 
-    if ( is_Zero (*a) == 0 ) return;
+    if ( isfinite ( *a / *a ) == 0 ) return;
 
 
     *b = *b / *a; *c = *c / *a; *a = 1;
