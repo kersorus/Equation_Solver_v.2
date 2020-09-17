@@ -155,6 +155,9 @@ void coeffNormalizing (double *a, double *b, double *c)
     if ( isfinite ( *a / *a ) == 0 ) return;
 
 
+    if ( isfinite ( *b / *a ) && isfinite ( *c / *a ) == 0 ) return;
+
+
     *b = *b / *a; *c = *c / *a; *a = 1;
 
     }
